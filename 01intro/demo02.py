@@ -19,11 +19,11 @@ if __name__ == "__main__":
     messages = [
         {
             "role": "system",
-            "content": "你是AI助手小瓜，是 AGI 课堂的助教。这门课每周二、四上课。"  # 注入新知识
+            "content": "你是一个Java领域的专家"  # 注入新知识
         },
         {
             "role": "user",
-            "content": "周末上课吗？"  # 问问题。可以改改试试
+            "content": "Java代码中，我有一个passList集合，这里面对象中有一个字段叫做expireTime额度有效期，是一个Integer类型的时间戳，我想获取这个集合中额度有效期最大的那个值，如果获取到最大的值为空或者为0，取当前日期30天的时间，如何计算 用中文"  # 问问题。可以改改试试
         },
 
     ]
@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     # 调用 GPT-3.5
     chat_completion = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4-turbo-preview",
         messages=messages
     )
 
