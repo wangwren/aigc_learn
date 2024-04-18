@@ -18,7 +18,7 @@ def get_completion(messages, model="gpt-3.5-turbo"):
         model=model,
         messages=messages,
         temperature=0,
-        tools=[{  # 用 JSON 描述函数。可以定义多个。由大模型决定调用谁。也可能都不调用
+        tools=[{  # 用 JSON 描述函数。可以定义多个。由大模型决定调用谁。也可能都不调用，下面items指定的是数组array中的数据类型是number
             "type": "function",
             "function": {
                 "name": "sum",
